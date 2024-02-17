@@ -23,7 +23,7 @@ from config import DB_URI as MONGO_URL
 from pymongo import MongoClient
 
 mongo_client = MongoClient(MONGO_URL)
-mongo_db = mongo_client["cloned_vjbotz"]
+mongo_db = mongo_client["cloned_rohesh_bots"]
 
 logger = logging.getLogger(__name__)
 
@@ -52,12 +52,12 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('💞 𝐣𝐨𝐢𝐧𝐞 𝐦𝐲 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐜𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/Rohesh_Bots')
             ],[
             InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', url=f'https://t.me/{BOT_USERNAME}?start=clone')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🔻', callback_data='about')
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 📛', callback_data='about')
         ]]
         me2 = (await client.get_me()).mention
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -90,7 +90,7 @@ async def start(client, message):
                 )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '@VJ_Botz  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '@Rohesh_Bots  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -180,12 +180,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.delete()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('💞 𝐣𝐨𝐢𝐧𝐞 𝐦𝐲 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐜𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/Rohesh_Bots')
             ],[
             InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', url=f'https://t.me/{BOT_USERNAME}?start=clone')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🔻', callback_data='about')
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 📛', callback_data='about')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
