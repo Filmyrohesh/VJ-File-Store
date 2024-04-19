@@ -10,11 +10,11 @@ class script(object):
 # Ask Doubt on telegram @Rohesh_Gavit
 
     
-    CAPTION = """<b>📂 ғɪʟᴇɴᴀᴍᴇ : {file_name}
+    CAPTION = """<b><a href='https://t.me/Filmy_Rohesh_Files'>{file_name}</a>
 
-sɪᴢᴇ ⚙️: {file_size}
-
-Jᴏɪɴ [ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ](https://t.me/Clone_File_Share_Bot)</b>""" 
+🔰 Join For Back-up
+@Filmy_Rohesh
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</b>""" 
 
 # Don't Remove Credit Tg - @Roheas_Bots
 # Subscribe Channel For Amazing bots @Roheas_Bots
